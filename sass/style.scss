@@ -2,6 +2,8 @@ $color-main: #3F51B5;
 $color-accent: #E81919;
 $color-text: #333333;
 
+$layout-width-inner: 1200px;
+
 // ブレイクポイント
 $breakpoints: (
   "sp": "(max-width: 767px)",
@@ -10,3 +12,34 @@ $breakpoints: (
 );
 
 // メディアクエリ
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// ボーダーの幅を含めるようにリセットCSS 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #fff;
+}
+
+img {
+  // 画像を指定の範囲にしてしてもらうようにする
+  max-width: 100%;
+  height: auto;
+}
