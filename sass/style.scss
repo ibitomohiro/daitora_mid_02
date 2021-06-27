@@ -9,7 +9,7 @@ $breakpoints: (
   "sp": "(max-width: 767px)",
   "tab": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
   "pc": "(min-width: #{layout-width-inner})",
-)!:default;
+)!default;
 
 // メディアクエリ
 @mixin mq($breakpoint: sp) {
@@ -61,7 +61,58 @@ h6 {
   padding: 0;
 }
 
+.inner {
+  // 幅はインナーの最大を取るように
+  width: $layout-width-inner;
+  max-width: 100%;
+  // 幅を中央寄せする
+  margin: 0 auto;
+}
+
 a {
   // 親要素を継承するようにする
   color: inherit;
+}
+
+.header {
+  background: $color-main;
+  // ヘッダーの幅は100pxデザインカンプを確認
+  height: 100px;
+}
+
+.header__inner {
+  // ロゴとnavを横並びにするのでflexをあてる
+  display: flex;
+  align-items: center;
+  // headerの100pxを継承するように上方向に高さを出す
+  height: inherit;
+}
+
+.header__logo {
+  // logoは w205px h40px
+  width: 205px;
+  img {
+    // 画像はblock要素に変える 余白を出さないために inline-bolockではなく
+    display: block;
+  }
+}
+
+.header__nav {
+  // liを横並びにするために親要素にflexを当てる
+  display: flex;
+  // 文字を上下中央寄せする
+  align-items: center;
+  // logoとnavを左側から離す
+  margin-left: auto;
+  li {
+    // 最初の文字の余白入らないのでnot:nth-child
+    &:not(:first-child) {
+      // 文字の幅は40px
+      margin-left: 40px;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
 }
