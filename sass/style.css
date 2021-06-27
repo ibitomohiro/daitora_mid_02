@@ -91,5 +91,16 @@ a {
 .header__nav li a {
   color: #fff;
   text-decoration: none;
+  position: relative;
+}
+
+.header__nav li a.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #E81919;
 }
 /*# sourceMappingURL=style.css.map */

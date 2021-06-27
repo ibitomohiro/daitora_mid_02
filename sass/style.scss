@@ -113,6 +113,21 @@ a {
     a {
       color: #fff;
       text-decoration: none;
+      position: relative;
+
+      &.is-active {
+        &::after {
+          content: "";
+          position: absolute;
+          // navから8px下にあるため
+          bottom: -8px;
+          left: 0;
+          width: 100%;
+          // 栓の高さ
+          height: 2px;
+          background: $color-accent;
+        }
+      }
     }
   }
 }
