@@ -17,6 +17,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   background: #fff;
+  color: #333333;
 }
 
 img {
@@ -102,5 +103,52 @@ a {
   width: 100%;
   height: 2px;
   background: #E81919;
+}
+
+.main-visual {
+  height: 600px;
+  width: 100%;
+  background: url(../img/mainvisual.png) no-repeat center center/cover;
+  position: relative;
+}
+
+.main-visual__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main-visual__title {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.main-visual__lead {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+
+.main-visual__button {
+  margin-top: 36px;
+}
+
+.main-visual__button a {
+  display: inline-block;
+  width: 390px;
+  height: 83px;
+  line-height: 83px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background: #3F51B5;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

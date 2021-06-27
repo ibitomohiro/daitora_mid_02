@@ -36,6 +36,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   background: #fff;
+  color: $color-text;
 }
 
 img {
@@ -129,5 +130,57 @@ a {
         }
       }
     }
+  }
+}
+
+// --------------main visual---------------
+.main-visual {
+  // 背景画像はw1200px * h600px
+  height: 600px;
+  width: 100%;
+  // 繰り返さない、縦横中央、全体を覆うように
+  background: url(../img/mainvisual.png) no-repeat center center /cover;
+  // 親 absolute 子 relative
+  position: relative;
+}
+
+.main-visual__content {
+  // 上下中央のCSSなので覚える
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // コンテンツ全体にtext-align center を適用させる！
+  text-align: center;
+}
+
+.main-visual__title {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.main-visual__lead {
+  font-size: 24px;
+  font-weight: 700;
+  // 実際より少し小さい値にすると良いらしい
+  margin-top: 24px;
+}
+
+.main-visual__button {
+  margin-top: 36px;
+
+  a {
+    display: inline-block;
+    width: 390px;
+    height: 83px;
+    line-height: 83px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    background: $color-main;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
+    text-decoration: none;
   }
 }
