@@ -227,4 +227,68 @@ a {
     font-size: 24px;
   }
 }
+
+.card {
+  margin-top: 100px;
+  background: #efefef;
+  padding: 100px 0 120px 0;
+}
+
+.card__head {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 28px;
+  position: relative;
+}
+
+.card__head::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: #3F51B5;
+}
+
+.card__items {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card__item {
+  width: calc(33.3% - 24px * 2 / 3);
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.card__item:not(:nth-child(3n + 1)) {
+  margin-left: 24px;
+}
+
+.card__item:nth-child(n + 4) {
+  margin-top: 24px;
+}
+
+.card_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #6f7579;
+  margin-top: 14px;
+}
+
+.card__text {
+  color: #6f7579;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 10px;
+}
 /*# sourceMappingURL=style.css.map */

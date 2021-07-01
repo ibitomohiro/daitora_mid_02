@@ -248,3 +248,84 @@ a {
     }
   }
 }
+
+// --------------------カード-----------------------//
+.card {
+  // カード全体の色余白をコーディング
+  margin-top: 100px;
+  background: #efefef;
+  // 余白は上が100px,左右0, 下に120px
+  padding: 100px 0 120px 0;
+}
+
+.card__inner {
+
+}
+
+.card__head {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  // 下に青いバーがあるのでそのスペースを取る
+  padding-bottom: 28px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    // 青い線の大きさ w60 * h 4px
+    width: 60px;
+    height: 4px;
+    background: $color-main;
+  }
+}
+
+.card__items {
+  margin-top: 80px;
+  // card-itemsを横並びにするので親要素にflexを当てる
+  display: flex;
+  // 改行があるのでflex wrapを当てる
+  flex-wrap: wrap;
+}
+
+.card__item {
+  // 3等分なので33.3% 余白24pxが2つ カードが3つなので3で割るというロジック
+  width: calc(33.3% - 24px * 2 / 3);
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 4px;
+
+  &:not(:nth-child(3n + 1)) {
+    margin-left: 24px;
+  }
+
+  &:nth-child(n + 4) {
+    // 最上部のカード以外はmargin-top24pxが適用されるようにする。　
+    margin-top: 24px;
+  }
+}
+
+.card__img {
+  img {
+
+  }
+}
+
+.card_title  {
+  font-size: 20px;
+  font-weight: 700;
+  color: #6f7579;
+  margin-top: 14px;
+}
+
+.card__text {
+  color: #6f7579;
+  font-weight: 700;
+  // 2行以上の文章の場合はline heightを調整する必要がある
+  // 行間24px font-size16pxなので 行間 / line-height の計算をする
+  line-height: (24 / 16);
+  margin-top: 10px;
+}
