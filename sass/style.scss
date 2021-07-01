@@ -256,6 +256,11 @@ a {
   background: #efefef;
   // 余白は上が100px,左右0, 下に120px
   padding: 100px 0 120px 0;
+
+  @include mq('sp') {
+    margin-top: 50px;
+    padding-bottom: 60px;
+  }
 }
 
 .card__inner {
@@ -280,6 +285,16 @@ a {
     width: 60px;
     height: 4px;
     background: $color-main;
+
+    @include mq('sp') {
+      width: 42px;
+      height: 3px;
+    }
+  }
+
+  @include mq('sp') {
+    font-size: 26px;
+    padding-bottom: 18px;
   }
 }
 
@@ -289,6 +304,10 @@ a {
   display: flex;
   // 改行があるのでflex wrapを当てる
   flex-wrap: wrap;
+
+  @include mq('sp') {
+    margin-top: 42px;
+  }
 }
 
 .card__item {
@@ -321,10 +340,20 @@ a {
       margin-top: 24px;
     }
   }
+
+  @include mq('sp') {
+    width: 100%;
+    margin-left: 0;
+
+    &:nth-child(n + 2) {
+      margin-top: 24px;
+    }
+  }
 }
 
 .card__img {
   img {
+    // 画像がぼやけるようだったら表示の仕方のコーディングを変えてあげる必要あり
     width: 100%;
   }
 }
