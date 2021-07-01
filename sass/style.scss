@@ -298,19 +298,34 @@ a {
   padding: 16px;
   border-radius: 4px;
 
-  &:not(:nth-child(3n + 1)) {
-    margin-left: 24px;
-  }
+  @include mq('pc') {
+    &:not(:nth-child(3n + 1)) {
+      margin-left: 24px;
+    }
 
-  &:nth-child(n + 4) {
-    // 最上部のカード以外はmargin-top24pxが適用されるようにする。　
-    margin-top: 24px;
+    &:nth-child(n + 4) {
+      // 最上部のカード以外はmargin-top24pxが適用されるようにする。　
+      margin-top: 24px;
+    }
+  }  
+
+  @include mq('tab') {
+    // tab表示のときはカードを2つずつ表示する
+    width: calc(50% - 24px * 1 / 2);
+
+    &:not(:nth-child(2n + 1)) {
+      margin-left: 24px;
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: 24px;
+    }
   }
 }
 
 .card__img {
   img {
-
+    width: 100%;
   }
 }
 
