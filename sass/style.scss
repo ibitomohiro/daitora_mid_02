@@ -78,7 +78,38 @@ h6 {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
 
+// 共通のタイトルのクラスを作成してそこに当て込む
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  // 下に青いバーがあるのでそのスペースを取る
+  padding-bottom: 28px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    // 青い線の大きさ w60 * h 4px
+    width: 60px;
+    height: 4px;
+    background: $color-main;
+
+    @include mq('sp') {
+      width: 42px;
+      height: 3px;
+    }
+  }
+
+  @include mq('sp') {
+    font-size: 26px;
+    padding-bottom: 18px;
+  }
 }
 
 a {
@@ -267,34 +298,7 @@ a {
 }
 
 .card__head {
-  font-size: 48px;
-  font-weight: 700;
-  text-align: center;
-  // 下に青いバーがあるのでそのスペースを取る
-  padding-bottom: 28px;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    // 青い線の大きさ w60 * h 4px
-    width: 60px;
-    height: 4px;
-    background: $color-main;
-
-    @include mq('sp') {
-      width: 42px;
-      height: 3px;
-    }
-  }
-
-  @include mq('sp') {
-    font-size: 26px;
-    padding-bottom: 18px;
-  }
+  // card headはsection-titleに共通化したので削除！
 }
 
 .card__items {
@@ -371,4 +375,107 @@ a {
   // 行間24px font-size16pxなので 行間 / line-height の計算をする
   line-height: (24 / 16);
   margin-top: 10px;
+}
+
+// ------------ news -----------//
+
+.news {
+  padding: 100px 0 120px;
+  background: #ffffff;
+}
+
+.news__inner {
+
+}
+
+.news__head {
+
+}
+
+.news__items {
+  // 上に80px離れたところに青い棒がある 横は中央揃い
+  margin: 80px auto 0;
+  width: 800px;
+  max-width: 100%;
+}
+
+.news__item {
+  display: flex;
+  padding: 20px 0 12px;
+
+  &:not(:first-child) {
+    border-top: solid 1px #707070;
+  }
+}
+
+.news__meta {
+ display: flex;
+//meta date + label 
+width: 185px;
+}
+
+.news__date {
+  // 日付85px余白20px
+  width: 105px;
+  padding: 3px;
+}
+
+.news__label {
+  a {
+    // 高さを出すためdisplay inline-block
+    display: inline-block;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    color: #ffffff;
+    text-align: center;
+    background: #666666;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+
+    &.is-blue {
+      background: $color-main;
+    }
+    &.is-red {
+      background: $color-accent;
+    }
+  }
+}
+
+.news__title {
+  // コメントの長さによって幅を変えるようにする。
+  width: calc(100% - 185px);
+  padding-left: 20px;
+  padding-top: 3px;
+  a {
+    text-decoration: none;
+    // 行間 / 文字の大きさ
+    line-height: (20 / 16);
+  }
+}
+
+.news__more {
+  margin-top: 60px;
+  text-align: center;
+  // 余白10px,→4pxで余白を取る
+  a {
+    text-decoration: none;
+    color:$color-accent;
+    font-weight: 700;
+    padding-right: 14px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      // 画像のサイズが小さいので実際のサイズを画像ファイルを見て調整する
+      width: 7px;
+      height: 11px;
+      background: url(../img/news-arrow.png) no-repeat center center / contain;
+    }
+  }
 }
