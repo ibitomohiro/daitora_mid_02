@@ -80,6 +80,16 @@ h6 {
   }
 }
 
+.section {
+  padding: 100px 0 120px 0;
+
+  @include mq('sp') {
+    margin-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+
+
 // 共通のタイトルのクラスを作成してそこに当て込む
 .section-title {
   font-size: 48px;
@@ -285,12 +295,6 @@ a {
   // カード全体の色余白をコーディング
   background: #efefef;
   // 余白は上が100px,左右0, 下に120px
-  padding: 100px 0 120px 0;
-
-  @include mq('sp') {
-    margin-top: 50px;
-    padding-bottom: 60px;
-  }
 }
 
 .card__inner {
@@ -380,13 +384,7 @@ a {
 // ------------ news -----------//
 
 .news {
-  padding: 100px 0 120px;
   background: #ffffff;
-
-  @include mq('sp') {
-    padding-top: 50px;
-    padding-bottom: 60px;
-  }
 }
 
 .news__inner {
@@ -506,7 +504,7 @@ width: 185px;
 // --------- price section -----------//
 
 .price {
-
+  
 }
 
 .price__inner {
@@ -518,40 +516,69 @@ width: 185px;
 }
 
 .price__content {
-
+  display: flex;
+  margin-top: 80px;
 }
 
 .price__image {
+  // innerの幅が1200pxなので割り算で求める
+  width: 454 / 1200 * 100%;
   img {
 
   }
 }
 .price__table {
-
+  // innerの幅が1200pxなので割り算で求める
+  width: (172 + 268 + 268) / 1200 * 100%;
+  margin-left: auto;
 }
 
 .table {
+  //エクセルのようにセルを１本の線で結ぶ
+  border-collapse: collapse;
+  border: 1px solid #707070;
+  background: #ffffff;
+  font-weight: 700;
+  width: 100%;
+  // tableを均等に分けるプロパティ
+  table-layout: fixed;
   th,
   td {
-
+    border: 1px solid #707070;
+    padding: 0 24px;
+    height: 58px;
+    vertical-align: middle;
   }
 
   th {
+    background: #999999;
+    color: #ffffff;
+    text-align: center;
 
+    &:first-child {
+      width: 172px;
+    }
   }
   td {
-
+    text-align: right;
   }
   strong {
-
+    color: $color-accent;
+    line-height: 1.2;
   }
   span {
-    
+    font-size: 13px;
+    // 改行されるためブロック要素にする
+    display: block;
+    margin-top: 1px;
+    line-height: 1.2;
   }
 }
 
 .price__attention {
+  font-size: 14px;
+  margin-top: 10px;
   a {
-
+    font-weight: 700;
   }
 }
