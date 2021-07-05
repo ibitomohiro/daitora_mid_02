@@ -619,6 +619,10 @@ width: 185px;
 margin: 80px auto 0;
 width: 800px;
 max-width: 100%;
+
+@include mq('sp') {
+  margin-top: 40px;
+}
 }
 
 .iframe-wrap {
