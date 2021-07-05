@@ -471,13 +471,33 @@ a {
   margin-top: 80px;
 }
 
+@media (max-width: 767px) {
+  .price__content {
+    display: block;
+    margin-top: 40px;
+  }
+}
+
 .price__image {
   width: 37.83333%;
+}
+
+@media (max-width: 767px) {
+  .price__image {
+    width: 100%;
+  }
 }
 
 .price__table {
   width: 59%;
   margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .price__table {
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
 .table {
@@ -505,6 +525,12 @@ a {
 
 .table th:first-child {
   width: 172px;
+}
+
+@media (max-width: 767px) {
+  .table th:first-child {
+    width: 112px;
+  }
 }
 
 .table td {

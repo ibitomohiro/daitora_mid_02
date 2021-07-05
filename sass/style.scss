@@ -518,11 +518,20 @@ width: 185px;
 .price__content {
   display: flex;
   margin-top: 80px;
+
+  @include mq('sp') {
+    display: block ;
+    margin-top: 40px;
+  }
 }
 
 .price__image {
   // innerの幅が1200pxなので割り算で求める
   width: 454 / 1200 * 100%;
+
+  @include mq('sp') {
+    width: 100%;
+  }
   img {
 
   }
@@ -531,6 +540,11 @@ width: 185px;
   // innerの幅が1200pxなので割り算で求める
   width: (172 + 268 + 268) / 1200 * 100%;
   margin-left: auto;
+
+  @include mq('sp') {
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
 .table {
@@ -555,8 +569,12 @@ width: 185px;
     color: #ffffff;
     text-align: center;
 
+    
     &:first-child {
       width: 172px;
+      @include mq('sp') {
+        width: 112px;
+      }
     }
   }
   td {
