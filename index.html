@@ -181,33 +181,40 @@
           <dl class="contact-form__dl">
             <div class="contact-form__row">
               <!-- お名前を押したときにinputが選択される -->
-              <div class="contact-form__label"><label for="your-name">お名前</label></div>
-              <div class="contact-form__input"><input id="your-name" type="text" placeholder="山田 太郎"></div>
+              <dt class="contact-form__label"><label for="your-name" class="is-required">お名前</label></dt>
+              <dd class="contact-form__input"><input id="your-name" type="text" placeholder="山田 太郎"></dd>
             </div>
             <div class="contact-form__row">
-              <div class="contact-form__label"><label for="your-email">メールアドレス</label></div>
-              <div class="contact-form__input"><input id="your-email" type="email" placeholder="text@example.com"></div>
+              <dt class="contact-form__label"><label for="your-email" class="is-required">メールアドレス</label></dt>
+              <dd class="contact-form__input"><input id="your-email" type="email" placeholder="text@example.com"></dd>
             </div>
             <div class="contact-form__row">
-              <div class="contact-form__label"><label for="your-kind">お問い合わせ種別</label></div>
-              <div class="contact-form__input">
+              <dt class="contact-form__label"><label for="your-kind">お問い合わせ種別</label></dt>
+              <dd class="contact-form__input">
                 <select name="" id="your-kind">
                   <option value="">セレクト1</option>
                   <option value="">セレクト2</option>
                   <option value="">セレクト3</option>
                 </select>
-              </div>
+              </dd>
             </div>
             <div class="contact-form__row">
-              <div class="contact-form__label"><label for="your-message">お問い合わせ内容</label></div>
-              <div class="contact-form__input"><textarea id="your-message" placeholder="お問い合わせを入力してください"></textarea></div>
+              <dt class="contact-form__label"><label for="your-message">お問い合わせ内容</label></dt>
+              <dd class="contact-form__input"><textarea id="your-message" placeholder="お問い合わせを入力してください"></textarea></dd>
             </div>
           </dl>
           <div class="contact-form__radio">
             <!-- checkedでチェックが入った状態になる -->
-            <label for=""><input type="radio" name="your-radio" checked><span>ラジオ１</span></label>
-            <label for=""><input type="radio" name="your-radio"><span>ラジオ２</span></label>
-            <label for=""><input type="radio" name="your-radio"><span>ラジオ３</span></label>
+            <label><input type="radio" name="your-radio" checked><span>ラジオ１</span></label>
+            <label><input type="radio" name="your-radio"><span>ラジオ２</span></label>
+            <label><input type="radio" name="your-radio"><span>ラジオ３</span></label>
+          </div>
+          <div class="contact-form__check">
+            <!-- ラベルで囲って文字をクリックしてもチェックされるようにする その時forはlabelの中に必要ない！ -->
+            <label><input type="checkbox"><span><a href="">プライバシーポリシー</a>に合意する</span></label>
+          </div>
+          <div class="contact-form__button">
+            <input type="submit" value="送信する">
           </div>
         </form>
       </div>

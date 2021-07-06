@@ -697,3 +697,195 @@ max-width: 100%;
     }
   }
 }
+
+// --------- contact -------------//
+
+.contact {
+  background: #EFEFEF;
+}
+
+.contact__inner {
+
+}
+
+.contact__head {
+
+}
+
+.contact__form {
+  margin: 80px auto 0;
+  width: 800px;
+  max-width: 100%;
+  background: #ffffff;
+  padding: 60px;
+}
+
+.contact-form {
+
+}
+
+.contact-form__dl {
+
+}
+
+.contact-form__row {
+  display: flex;
+  &:not(:first-child) {
+    margin-top: 60px;
+  }
+}
+
+.contact-form__label {
+  width: 160px;
+  padding-top: 5px;
+  label {
+    font-weight: 700;
+    // ラベルにクラスを設けて必須の箇所をコーディング
+    &.is-required {
+      display: inline-block;
+      position: relative;
+
+      &::after {
+        content: "必須";
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: #ffffff;
+        background: $color-accent;
+        text-align: center;
+        border-radius: 4px;
+        padding: 2px 8px;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.contact-form__input {
+  width: calc(100% - 160px);
+  [type="text"] {
+    // 初期化をしてからコーディング
+    box-shadow: none;
+    border: 1px solid #707070;
+    background: #ffffff;
+    padding: 10px 16px;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  [type="email"] {
+    box-shadow: none;
+    border: 1px solid #707070;
+    background: #ffffff;
+    padding: 10px 16px;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  select {
+    box-shadow: none;
+    border: 1px solid #707070;
+    // selectは疑似要素が使えない
+    // 右から12px離す
+    // 横17px 縦14pxを入力する
+    background: #ffffff url(../img/select-arrow.png) no-repeat right 12px center / 17px 14px;
+    padding: 10px 16px;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  textarea {
+    height: 240px;
+    box-shadow: none;
+    border: 1px solid #707070;
+    background: #ffffff;
+    padding: 10px 16px;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    // サイズを変えられないようにする
+    resize: none;
+  }
+}
+
+
+
+.contact-form__radio {
+  margin-top: 32px;
+  [type="radio"] {
+    display: none;
+  }
+
+  span {
+    display:inline-block;
+    padding-left: 26px;
+    position: relative;
+    margin-right: 36px;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: 1px solid #707070;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ffffff;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: $color-main;
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      display: none;
+    }
+  }
+
+  [type="radio"]:checked + span {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.contact-form__check {
+  margin-top: 63px;
+  text-align: center;
+  [type="checkbox"] {
+
+  }
+}
+
+.contact-form__button {
+  // 属性クラスで指定する
+  margin-top: 30px;
+  text-align: center;
+  [type="submit"] {
+
+  }
+}
