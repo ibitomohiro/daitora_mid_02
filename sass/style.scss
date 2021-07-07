@@ -877,7 +877,44 @@ max-width: 100%;
   margin-top: 63px;
   text-align: center;
   [type="checkbox"] {
+    display: none;
+  }
 
+  span {
+    display: inline-block;
+    padding-left: 49px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 25px;
+      height: 25px;
+      background: #ffffff;
+      border: 1px solid #707070;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background: url(../img/checkbox.png) no-repeat center center / contain;
+      display: none;
+    }
+  }
+  [type="checkbox"]:checked + span {
+    &::after {
+      display: block;
+    }
+  }
+  a {
+    font-weight: 700;
   }
 }
 
@@ -886,6 +923,18 @@ max-width: 100%;
   margin-top: 30px;
   text-align: center;
   [type="submit"] {
-
+    background: $color-main url(../img/button-arrow.png) no-repeat right 12px center / 17px 16px;
+    width: 304px;
+    display: inline-block;
+    font-weight: 700;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    box-sizing: 0 3px 6px rgba(#000, 0.16);
+    // 初期化のコードを入れてあげる
+    appearance: none;
+    font-family: inherit;
+    border: none;
+    font-size: 16px;
   }
 }
