@@ -992,6 +992,11 @@ max-width: 100%;
   background: linear-gradient(to bottom, #666666, #333333);
   padding: 60px 0 24px;
   color: #ffffff;
+
+  @include mq('sp') {
+    padding-top: 30px;
+    padding-bottom: 14px;
+  }
 }
 
 .footer__inner {
@@ -1000,10 +1005,17 @@ max-width: 100%;
 
 .footer__content {
   display: flex;
+
+  @include mq('sp') {
+    display: block;
+  }
 }
 
 .footer__left {
   width: 36%;
+  @include mq('sp') {
+    width: 100%;
+  }
 }
 
 .footer__logo {
@@ -1019,24 +1031,46 @@ max-width: 100%;
 .footer__address,
 .footer__tel {
   font-size: 14px;
+  @include mq('sp') {
+    margin-left: 10px;
+  }
 }
 
 .footer__address {
   margin-top: 28px;
+
+  @include mq('sp') {
+    margin-top: 13px;
+  }
 }
 
 .footer__tel {
   margin-top: 10px;
+
+  @include mq('sp') {
+    margin-top: 6px;
+  }
 }
 
 .footer__center {
   width: 48%;
+  @include mq('sp') {
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 .footer__nav {
   display: flex;
+  @include mq('sp') {
+    justify-content: center;
+  }
   li {
     &:not(:first-child) {
       margin-left: 40px;
+
+      @include mq('sp') {
+        margin-left: 20px;
+      }
     }
     a {
       text-decoration: none;
@@ -1046,12 +1080,20 @@ max-width: 100%;
 
 .footer__right {
   width: 16%;
+  @include mq('sp') {
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
 .footer__sns {
   display: flex;
   // justify-content flex-endで右によせることができる
   justify-content: flex-end;
+
+  @include mq('sp') {
+    justify-content: center;
+  }
   li {
     &:not(:first-child) {
       margin-left: 16px;
@@ -1068,15 +1110,28 @@ max-width: 100%;
 .footer__copy{
   text-align: center;
   margin-top: 46px;
+
+  @include mq('sp') {
+    margin-top: 22px;
+  }
 }
 
 .to-top {
   position: fixed;
   right: 24px;
   bottom: 24px;
+
+  @include mq('sp') {
+    right: 12px;
+    bottom: 12px;
+  }
   a {
     img {
       width: 60px;
+
+      @include mq('sp') {
+        width: 40px;
+      }
     }
   }
 }

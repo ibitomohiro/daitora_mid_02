@@ -958,14 +958,33 @@ a {
   color: #ffffff;
 }
 
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 14px;
+  }
+}
+
 .footer__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+@media (max-width: 767px) {
+  .footer__content {
+    display: block;
+  }
+}
+
 .footer__left {
   width: 36%;
+}
+
+@media (max-width: 767px) {
+  .footer__left {
+    width: 100%;
+  }
 }
 
 .footer__logo img {
@@ -977,16 +996,42 @@ a {
   font-size: 14px;
 }
 
+@media (max-width: 767px) {
+  .footer__address,
+  .footer__tel {
+    margin-left: 10px;
+  }
+}
+
 .footer__address {
   margin-top: 28px;
+}
+
+@media (max-width: 767px) {
+  .footer__address {
+    margin-top: 13px;
+  }
 }
 
 .footer__tel {
   margin-top: 10px;
 }
 
+@media (max-width: 767px) {
+  .footer__tel {
+    margin-top: 6px;
+  }
+}
+
 .footer__center {
   width: 48%;
+}
+
+@media (max-width: 767px) {
+  .footer__center {
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
 .footer__nav {
@@ -995,8 +1040,22 @@ a {
   display: flex;
 }
 
+@media (max-width: 767px) {
+  .footer__nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer__nav li:not(:first-child) {
   margin-left: 40px;
+}
+
+@media (max-width: 767px) {
+  .footer__nav li:not(:first-child) {
+    margin-left: 20px;
+  }
 }
 
 .footer__nav li a {
@@ -1007,6 +1066,13 @@ a {
   width: 16%;
 }
 
+@media (max-width: 767px) {
+  .footer__right {
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+
 .footer__sns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1014,6 +1080,14 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  .footer__sns {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footer__sns li:not(:first-child) {
@@ -1033,13 +1107,32 @@ a {
   margin-top: 46px;
 }
 
+@media (max-width: 767px) {
+  .footer__copy {
+    margin-top: 22px;
+  }
+}
+
 .to-top {
   position: fixed;
   right: 24px;
   bottom: 24px;
 }
 
+@media (max-width: 767px) {
+  .to-top {
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
 .to-top a img {
   width: 60px;
+}
+
+@media (max-width: 767px) {
+  .to-top a img {
+    width: 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
