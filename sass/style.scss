@@ -988,7 +988,10 @@ max-width: 100%;
 // ---------- footer -------------//
 
 .footer {
-
+  // グラデーションを表現する
+  background: linear-gradient(to bottom, #666666, #333333);
+  padding: 60px 0 24px;
+  color: #ffffff;
 }
 
 .footer__inner {
@@ -996,62 +999,84 @@ max-width: 100%;
 }
 
 .footer__content {
-
+  display: flex;
 }
 
 .footer__left {
-
+  width: 36%;
 }
 
 .footer__logo {
   a {
     
   }
-
+  
   img {
-
+    width: 205px;
   }
 }
 
-.footer__address {
+.footer__address,
+.footer__tel {
+  font-size: 14px;
+}
 
+.footer__address {
+  margin-top: 28px;
 }
 
 .footer__tel {
-
+  margin-top: 10px;
 }
 
 .footer__center {
-
+  width: 48%;
 }
 .footer__nav {
+  display: flex;
   li {
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
     a {
-
+      text-decoration: none;
     }
   }
 }
 
 .footer__right {
-
+  width: 16%;
 }
 
 .footer__sns {
+  display: flex;
+  // justify-content flex-endで右によせることができる
+  justify-content: flex-end;
   li {
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
     a {
-
+      text-decoration: none;
+    }
+    img {
+      width: 30px;
     }
   }
 }
 
 .footer__copy{
-
+  text-align: center;
+  margin-top: 46px;
 }
 
-.to-top{
-  img {
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  a {
     img {
-      
+      width: 60px;
     }
   }
 }

@@ -950,4 +950,96 @@ a {
   border: none;
   font-size: 16px;
 }
+
+.footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#333333));
+  background: linear-gradient(to bottom, #666666, #333333);
+  padding: 60px 0 24px;
+  color: #ffffff;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__left {
+  width: 36%;
+}
+
+.footer__logo img {
+  width: 205px;
+}
+
+.footer__address,
+.footer__tel {
+  font-size: 14px;
+}
+
+.footer__address {
+  margin-top: 28px;
+}
+
+.footer__tel {
+  margin-top: 10px;
+}
+
+.footer__center {
+  width: 48%;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__nav li:not(:first-child) {
+  margin-left: 40px;
+}
+
+.footer__nav li a {
+  text-decoration: none;
+}
+
+.footer__right {
+  width: 16%;
+}
+
+.footer__sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer__sns li:not(:first-child) {
+  margin-left: 16px;
+}
+
+.footer__sns li a {
+  text-decoration: none;
+}
+
+.footer__sns li img {
+  width: 30px;
+}
+
+.footer__copy {
+  text-align: center;
+  margin-top: 46px;
+}
+
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+}
+
+.to-top a img {
+  width: 60px;
+}
 /*# sourceMappingURL=style.css.map */
