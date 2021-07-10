@@ -457,12 +457,16 @@ width: 185px;
     border-radius: 4px;
     font-weight: 700;
     text-decoration: none;
-
+    transition: all 0.3s ease 0s;
     &.is-blue {
       background: $color-main;
     }
     &.is-red {
       background: $color-accent;
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
@@ -476,6 +480,11 @@ width: 185px;
     text-decoration: none;
     // 行間 / 文字の大きさ
     line-height: (20 / 16);
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   @include mq('sp') {
@@ -499,6 +508,7 @@ width: 185px;
     font-weight: 700;
     padding-right: 14px;
     position: relative;
+    transition: all 0.3s ease 0s;
 
     &::after {
       content: "";
@@ -510,6 +520,10 @@ width: 185px;
       width: 7px;
       height: 11px;
       background: url(../img/news-arrow.png) no-repeat center center / contain;
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
@@ -611,6 +625,11 @@ width: 185px;
   margin-top: 10px; 
   a {
     font-weight: 700;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -698,6 +717,7 @@ max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(#000, 0.16);
     position: relative;
+    transition: all 0.3s ease 0s;
     &::after {
       content: "";
       position: absolute;
@@ -707,6 +727,10 @@ max-width: 100%;
       width: 17px;
       height: 16px;
       background: url(../img/button-arrow.png) no-repeat center center / contain;
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
@@ -974,6 +998,11 @@ max-width: 100%;
   }
   a {
     font-weight: 700;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -995,6 +1024,12 @@ max-width: 100%;
     font-family: inherit;
     border: none;
     font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -1087,6 +1122,11 @@ max-width: 100%;
     }
     a {
       text-decoration: none;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }
@@ -1113,6 +1153,11 @@ max-width: 100%;
     }
     a {
       text-decoration: none;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
     img {
       width: 30px;
@@ -1139,6 +1184,12 @@ max-width: 100%;
     bottom: 12px;
   }
   a {
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      opacity: 0.7;
+    }
     img {
       width: 60px;
 
