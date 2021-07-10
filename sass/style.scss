@@ -189,18 +189,25 @@ a {
       color: #fff;
       text-decoration: none;
       position: relative;
-      
 
+      &::after {
+        content: "";
+        position: absolute;
+        // navから8px下にあるため
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        // 栓の高さ
+        height: 2px;
+        // 透明の棒を疑似要素を使って設定するイメージ
+        background: transparent;
+        // 1.アニメーションを設定してあげる
+        transition: all 0.3s ease 0s;
+      }
+      // 2.ホバー時にもアクティブの要素を付与するようにする
+      &:hover,
       &.is-active {
         &::after {
-          content: "";
-          position: absolute;
-          // navから8px下にあるため
-          bottom: -8px;
-          left: 0;
-          width: 100%;
-          // 栓の高さ
-          height: 2px;
           background: $color-accent;
         }
       }

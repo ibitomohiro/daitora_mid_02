@@ -178,13 +178,19 @@ a {
   position: relative;
 }
 
-.header__nav li a.is-active::after {
+.header__nav li a::after {
   content: "";
   position: absolute;
   bottom: -8px;
   left: 0;
   width: 100%;
   height: 2px;
+  background: transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__nav li a:hover::after, .header__nav li a.is-active::after {
   background: #E81919;
 }
 
