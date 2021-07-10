@@ -189,6 +189,7 @@ a {
       color: #fff;
       text-decoration: none;
       position: relative;
+      
 
       &.is-active {
         &::after {
@@ -280,12 +281,17 @@ a {
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(#000, 0.16);
     text-decoration: none;
+    // transitonで定義をする
+    transition: all 0.3s ease 0s;
 
     @include mq('sp') {
       width: 280px;
       height: 60px;
       line-height: 60px;
       font-size: 24px;
+    }
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
