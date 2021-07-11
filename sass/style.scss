@@ -242,6 +242,11 @@ a {
   transform: translate(-50%, -50%);
   // コンテンツ全体にtext-align center を適用させる！
   text-align: center;
+
+  @include mq('sp') {
+    padding-left: 46px;
+    padding-right: 46px;
+  }
 }
 
 .main-visual__title {
@@ -1210,6 +1215,14 @@ max-width: 100%;
   &::after {
     display: none;
   }
+
+  @include mq('tab') {
+    right: 10px;
+  }
+
+  @include mq('sp') {
+    right: 10px;
+  }
 }
 
 .swiper-button-prev {
@@ -1220,6 +1233,14 @@ max-width: 100%;
   background: url(../img/arrow-prev.png) no-repeat center center / contain;
   &::after {
     display: none;
+  }
+
+  @include mq('tab') {
+    left: 10px;
+  }
+
+  @include mq('sp') {
+    left: 10px;
   }
 }
 
