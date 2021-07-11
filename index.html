@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- CSSの上に記述する -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="sass/style.css">
 </head>
 <body>
@@ -21,6 +23,27 @@
       </ul>
     </div>
   </header>
+
+  <!-- Slider main container -->
+<div class="main-visual swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
 
   <div class="main-visual">
     <div class="main-visual__content">
@@ -253,5 +276,8 @@
   </footer>
   <!-- footerの外全体に対して -->
   <div class="to-top"><a href=""><img src="./img/totop.png" alt=""></a></div>
+  <!-- bodyの上に記述 -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
