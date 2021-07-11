@@ -1199,3 +1199,42 @@ max-width: 100%;
     }
   }
 }
+
+//  スワイパーのページ
+.swiper-button-next {
+  width: 41px;
+  height: 40px;
+  margin-top: -20px;
+  right: calc(50% - #{$layout-width-inner / 2});
+  background: url(../img/arrow-next.png) no-repeat center center / contain;
+  &::after {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  left: calc(50% - #{$layout-width-inner / 2});
+  background: url(../img/arrow-prev.png) no-repeat center center / contain;
+  &::after {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2F7DC8;
+}

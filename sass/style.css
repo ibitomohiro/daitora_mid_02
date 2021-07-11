@@ -1212,4 +1212,44 @@ a {
     width: 40px;
   }
 }
+
+.swiper-button-next {
+  width: 41px;
+  height: 40px;
+  margin-top: -20px;
+  right: calc(50% - 600px);
+  background: url(../img/arrow-next.png) no-repeat center center/contain;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  left: calc(50% - 600px);
+  background: url(../img/arrow-prev.png) no-repeat center center/contain;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2F7DC8;
+}
 /*# sourceMappingURL=style.css.map */
