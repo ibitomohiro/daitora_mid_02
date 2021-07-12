@@ -43,3 +43,15 @@ jQuery('a[href^="#"]').on('click', function() {
   },
   300);
 });
+
+// window//
+
+// スクロールを検知するイベントを作成する
+// console.log(jQuery(this).scrollTop());でスクロールした位置を調べることができる
+jQuery(window).on('scroll', function(){
+  if (100 < jQuery(this).scrollTop()) {
+    jQuery('.to-top').addClass('is-show');
+  } else {
+    jQuery('.to-top').removeClass('is-show');
+  }
+});
