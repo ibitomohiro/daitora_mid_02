@@ -1289,6 +1289,17 @@ a {
   top: 20px;
   right: 16px;
   z-index: 30;
+  display: none;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+
+@media (max-width: 767px) {
+  .drawer-icon {
+    display: block;
+  }
 }
 
 .drawer-icon.is-active {
@@ -1354,6 +1365,10 @@ a {
   z-index: 29;
   -webkit-transform: translateX(105%);
           transform: translateX(105%);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 
 .drawer-content.is-active {

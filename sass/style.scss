@@ -1266,6 +1266,11 @@ max-width: 100%;
   top: 20px;
   right: 16px;
   z-index: 30;
+  display: none;
+  transition: transform 0.5s ease 0s;
+  @include mq('sp') {
+    display: block;
+  }
 
   &.is-active {
     transform: translateX(-200px);
@@ -1327,6 +1332,7 @@ max-width: 100%;
   z-index: 29;
   // 横方向に右側に移動するので105%
   transform: translateX(105%);
+  transition: transform 0.5s ease 0s;
 
   &.is-active {
     transform: translateX(0);
