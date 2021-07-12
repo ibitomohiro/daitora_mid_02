@@ -535,4 +535,4 @@
   module.exports = exports['default'];
 });
 
-new WOW().init();
+
