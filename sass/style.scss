@@ -1183,10 +1183,19 @@ max-width: 100%;
   position: fixed;
   right: 24px;
   bottom: 24px;
+  // もともとが非表示の設定を行う
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
 
   @include mq('sp') {
     right: 12px;
     bottom: 12px;
+  }
+// 動かしたら見えるコードを追加する
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
   }
   a {
     text-decoration: none;

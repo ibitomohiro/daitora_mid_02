@@ -1191,6 +1191,10 @@ a {
   position: fixed;
   right: 24px;
   bottom: 24px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 @media (max-width: 767px) {
@@ -1198,6 +1202,11 @@ a {
     right: 12px;
     bottom: 12px;
   }
+}
+
+.to-top.is-show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .to-top a {
