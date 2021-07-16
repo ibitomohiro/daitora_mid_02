@@ -60,3 +60,8 @@ jQuery('.header__nav li a').on('click', function(){
   jQuery('.header__nav li a').removeClass('is-active');
   jQuery(this).addClass('is-active');
 });
+
+// Q and A section//
+jQuery('.qa-box__q').on('click', function() {
+  jQuery(this).next().slideToggle();
+});

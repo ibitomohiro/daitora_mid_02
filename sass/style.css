@@ -1495,6 +1495,7 @@ a {
   color: #3F51B5;
   line-height: 1.5;
   padding: 16px 30px 16px 20px;
+  display: none;
 }
 
 .qa-box__content {
