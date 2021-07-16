@@ -1411,11 +1411,13 @@ max-width: 100%;
 }
 
 .qa__item {
-
+  &:nth-child(n + 2) {
+    margin-top: 24px;
+  }
 }
 
 .qa-box {
-
+  border: 1px solid $color-main;
 }
 
 .qa-box__q {
@@ -1466,9 +1468,21 @@ max-width: 100%;
 }
 
 .qa-box__a {
-
+  background: #ffffff;
+  color: $color-main;
+  line-height: (24 / 16);
+  padding: 16px 30px 16px 20px;
 }
 
 .qa-box__content {
+  position: relative;
+  padding-left: 35px;
+  font-weight: 700;
 
+  &::before {
+    content: "A";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

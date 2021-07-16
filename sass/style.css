@@ -1433,6 +1433,14 @@ a {
   margin-right: auto;
 }
 
+.qa__item:nth-child(n + 2) {
+  margin-top: 24px;
+}
+
+.qa-box {
+  border: 1px solid #3F51B5;
+}
+
 .qa-box__q {
   color: #ffffff;
   background: #3F51B5;
@@ -1480,5 +1488,25 @@ a {
   top: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.qa-box__a {
+  background: #ffffff;
+  color: #3F51B5;
+  line-height: 1.5;
+  padding: 16px 30px 16px 20px;
+}
+
+.qa-box__content {
+  position: relative;
+  padding-left: 35px;
+  font-weight: 700;
+}
+
+.qa-box__content::before {
+  content: "A";
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */
