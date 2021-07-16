@@ -1437,5 +1437,48 @@ a {
   color: #ffffff;
   background: #3F51B5;
   padding: 12px 56px;
+  font-weight: 700;
+  position: relative;
+}
+
+.qa-box__q::before {
+  content: "Q";
+  position: absolute;
+  top: 12px;
+  left: 20px;
+}
+
+.qa-box__icon {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.qa-box__bar1 {
+  width: 14px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+
+.qa-box__bar2 {
+  width: 2px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 /*# sourceMappingURL=style.css.map */
