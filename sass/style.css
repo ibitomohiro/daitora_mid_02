@@ -1423,4 +1423,19 @@ a {
 .drawer-background.is-active {
   display: block;
 }
+
+.qa__items {
+  width: 900px;
+  max-width: 100%;
+  margin-top: 80px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qa-box__q {
+  color: #ffffff;
+  background: #3F51B5;
+  padding: 12px 56px;
+}
 /*# sourceMappingURL=style.css.map */

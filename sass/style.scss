@@ -1402,15 +1402,26 @@ max-width: 100%;
 }
 
 .qa__items {
-
+  width: 900px;
+  max-width: 100%;
+  margin-top: 80px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .qa__item {
 
 }
 
-.qa-box__q {
+.qa-box {
 
+}
+
+.qa-box__q {
+  color: #ffffff;
+  background: $color-main;
+  padding: 12px 56px;
 }
 
 .qa-box__icon {
