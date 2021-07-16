@@ -55,3 +55,8 @@ jQuery(window).on('scroll', function(){
     jQuery('.to-top').removeClass('is-show');
   }
 });
+
+jQuery('.header__nav li a').on('click', function(){
+  jQuery('.header__nav li a').removeClass('is-active');
+  jQuery(this).addClass('is-active');
+});
