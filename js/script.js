@@ -64,4 +64,5 @@ jQuery('.header__nav li a').on('click', function(){
 // Q and A section//
 jQuery('.qa-box__q').on('click', function() {
   jQuery(this).next().slideToggle();
+  jQuery(this).children('.qa-box__icon').toggleClass('is-open');
 });

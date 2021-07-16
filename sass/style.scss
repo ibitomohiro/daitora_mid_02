@@ -1443,6 +1443,12 @@ max-width: 100%;
   right: 14px;
   top: 50%;
   transform: translateY(-50%);
+
+  &.is-open {
+    .qa-box__bar2 {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .qa-box__bar1 {
@@ -1465,6 +1471,7 @@ max-width: 100%;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
+  transition: all 0.3s ease 0s;
 }
 
 .qa-box__a {
