@@ -1522,7 +1522,9 @@ a {
   position: fixed;
   z-index: 501;
   width: 900px;
+  max-width: calc(100% - 24px * 2);
   height: 652px;
+  max-height: calc(100% - 24px * 2);
   background: #ffffff;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
@@ -1530,6 +1532,14 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.modal-contact__icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  top: -20px;
 }
 
 .modal-contact-background {

@@ -1501,7 +1501,9 @@ max-width: 100%;
   position: fixed;
   z-index: 501;
   width: 900px;
+  max-width: calc(100% - 24px * 2);
   height: 652px;
+  max-height: calc(100% - 24px * 2);
   background: #ffffff;
   box-shadow: 0 0 3px rgba(#000, 0.16);
   top: 50%;
@@ -1531,7 +1533,12 @@ max-width: 100%;
   }
 }
 
-.modal-contact__icon{
+.modal-contact__icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  top: -20px;
   a {
 
   }
