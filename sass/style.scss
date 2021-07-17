@@ -1498,7 +1498,15 @@ max-width: 100%;
 //  ------- modal -------//
 
 .modal-contact {
-
+  position: fixed;
+  z-index: 501;
+  width: 900px;
+  height: 652px;
+  background: #ffffff;
+  box-shadow: 0 0 3px rgba(#000, 0.16);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-contact__head {
