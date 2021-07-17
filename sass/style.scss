@@ -1534,11 +1534,26 @@ max-width: 100%;
 }
 
 .modal-contact__content {
+  margin-top: 40px;
 
 }
 
 .modal-contact__sub-head {
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 20px;
+  position: relative;
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: $color-main;
+  }
 }
 
 .modal-contact__text {
