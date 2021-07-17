@@ -1558,6 +1558,12 @@ a {
 
 .modal-contact__content {
   margin-top: 40px;
+  height: calc(100% - 84px - 108px);
+  overflow: auto;
+}
+
+.modal-contact__content > :first-child {
+  margin-top: 0;
 }
 
 .modal-contact__sub-head {
@@ -1565,6 +1571,7 @@ a {
   font-weight: 700;
   padding-left: 20px;
   position: relative;
+  margin-top: 40px;
 }
 
 .modal-contact__sub-head::before {
@@ -1577,6 +1584,12 @@ a {
   width: 4px;
   height: 20px;
   background: #3F51B5;
+}
+
+.modal-contact__text {
+  margin-top: 16px;
+  line-height: 1.5;
+  margin-left: 20px;
 }
 
 .modal-contact__icon {

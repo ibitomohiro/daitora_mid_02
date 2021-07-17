@@ -1535,7 +1535,14 @@ max-width: 100%;
 
 .modal-contact__content {
   margin-top: 40px;
-
+  // 上野余白と下の余白を引く
+  height: calc(100% - 84px - 108px);
+  // はみ出た部分をスクロールにする
+  overflow: auto;
+  // 要素に対するfirst-childには上野余白をゼロにするコーディング
+  > :first-child {
+    margin-top: 0;
+  }
 }
 
 .modal-contact__sub-head {
@@ -1543,6 +1550,7 @@ max-width: 100%;
   font-weight: 700;
   padding-left: 20px;
   position: relative;
+  margin-top: 40px;
 
   &::before {
     content: "";
@@ -1557,7 +1565,9 @@ max-width: 100%;
 }
 
 .modal-contact__text {
-
+  margin-top: 16px;
+  line-height: (24 / 16);
+  margin-left: 20px;
 }
 
 .modal-contact__button {
