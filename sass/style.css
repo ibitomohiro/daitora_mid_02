@@ -1592,6 +1592,25 @@ a {
   margin-left: 20px;
 }
 
+.modal-contact__button {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.modal-contact__button a {
+  text-decoration: none;
+  display: inline-block;
+  width: 176px;
+  padding: 14px;
+  text-align: center;
+  color: #ffffff;
+  background: #3F51B5;
+  font-weight: 700;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
 .modal-contact__icon {
   position: absolute;
   width: 40px;

@@ -1571,8 +1571,19 @@ max-width: 100%;
 }
 
 .modal-contact__button {
+  margin-top: 60px;
+  text-align: center;
   a {
-
+    text-decoration: none;
+    display: inline-block;
+    width: 176px;
+    padding: 14px;
+    text-align: center;
+    color: #ffffff;
+    background: $color-main;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
   }
 }
 
