@@ -1532,6 +1532,28 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  padding: 60px;
+  color: #707070;
+}
+
+.modal-contact__head {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 24px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-contact__head::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background: #3F51B5;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .modal-contact__icon {
