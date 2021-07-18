@@ -1511,6 +1511,11 @@ max-width: 100%;
   transform: translate(-50%, -50%);
   padding: 60px;
   color: #707070;
+
+  @include mq('sp') {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .modal-contact__head {

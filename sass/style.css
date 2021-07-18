@@ -1536,6 +1536,13 @@ a {
   color: #707070;
 }
 
+@media (max-width: 767px) {
+  .modal-contact {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .modal-contact__head {
   font-size: 24px;
   font-weight: 700;
