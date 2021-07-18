@@ -66,3 +66,16 @@ jQuery('.qa-box__q').on('click', function() {
   jQuery(this).next().slideToggle();
   jQuery(this).children('.qa-box__icon').toggleClass('is-open');
 });
+
+// ----閉じるボタン------//
+jQuery('.js-close-button').on('click', function(e){
+  e.preventDefault();
+  var target = jQuery(this).data('target');
+  jQuery(target).hide();
+});
+//---- 開くボタン ------//
+jQuery('.js-open-button').on('click', function(e){
+  e.preventDefault();
+  var target = jQuery(this).data('target');
+  jQuery(target).show();
+});

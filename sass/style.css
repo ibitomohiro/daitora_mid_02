@@ -1534,12 +1534,13 @@ a {
           transform: translate(-50%, -50%);
   padding: 60px;
   color: #707070;
+  display: none;
 }
 
 @media (max-width: 767px) {
   .modal-contact {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -1634,5 +1635,6 @@ a {
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   z-index: 500;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

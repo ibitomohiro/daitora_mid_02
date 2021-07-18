@@ -272,7 +272,7 @@
           </div>
           <div class="contact-form__check">
             <!-- ラベルで囲って文字をクリックしてもチェックされるようにする その時forはlabelの中に必要ない！ -->
-            <label><input type="checkbox"><span><a href="">プライバシーポリシー</a>に合意する</span></label>
+            <label><input type="checkbox"><span><a href="" class="js-open-button" data-target=".target-modal">プライバシーポリシー</a>に合意する</span></label>
           </div>
           <div class="contact-form__button">
             <input type="submit" value="送信する">
@@ -282,7 +282,7 @@
     </div>
   </section>
 
-  <div class="modal-contact">
+  <div class="modal-contact target-modal">
     <div class="modal-contact__head">プライバシーポリシー</div>
     <div class="modal-contact__content">
       <div class="modal-contact__sub-head">ほにゃらら</div>
@@ -294,10 +294,10 @@
       <div class="modal-contact__sub-head">ほにゃらら</div>
       <div class="modal-contact__text">ほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃららほにゃらら。</div>
     </div>
-    <div class="modal-contact__button"><a href="">閉じる</a></div>
-    <div class="modal-contact__icon"><a href=""><img src="./img/btn-batsu.png" alt="batsu"></a></div>
+    <div class="modal-contact__button"><a class="js-close-button" href="" data-target=".target-modal">閉じる</a></div>
+    <div class="modal-contact__icon"><a class=" js-close-button" href="" data-target=".target-modal"><img src="./img/btn-batsu.png" alt="batsu"></a></div>
   </div>
-  <div class="modal-contact-background"></div>
+  <div class="modal-contact-background target-modal"></div>
   <section class="qa section">
     <div class="qa__inner inner">
       <div class="qa_head section-title">Q & A</div>
